@@ -1,0 +1,29 @@
+{
+  "short_name": "Gaby AI",
+  "name": "Gaby - Automação de Apps com IA",
+  "description": "Uma simulação web de um aplicativo Android que usa DeepSeek para automatizar e controlar outros aplicativos por meio de comandos em linguagem natural.",
+  "icons": [
+    {
+      "src": "/gaby-icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/gaby-icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/gaby-icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4f46e5",
+  "background_color": "#111827"
+}

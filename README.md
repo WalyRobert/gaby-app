@@ -1,35 +1,20 @@
-# Gaby - Automacao de Apps com IA
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-## Descricao
+# Run and deploy your AI Studio app
 
-Gaby e um aplicativo web que permite automatizar acoes em outros aplicativos usando inteligencia artificial (Gemini API).
+This contains everything you need to run your app locally.
 
-## Caracteristicas
+View your app in AI Studio: https://ai.studio/apps/drive/1ztKDp8YkVilUeU8waId72HEwFKCT7OUM
 
-- Automacao de aplicacoes
-- Integracao com IA (Gemini)
-- Captura de tela
-- Interface em portugues
-- Progressive Web App (PWA)
+## Run Locally
 
-## Como Usar
+**Prerequisites:**  Node.js
 
-1. Acesse o app em seu navegador
-2. Insira sua chave API do Gemini
-3. Capture uma tela do aplicativo que deseja automatizar
-4. Descreva a acao que deseja realizar
-5. A IA ira simular o toque/clique na tela
 
-## Deploy na Vercel
-
-Para publicar este app:
-
-1. Faca push do codigo para GitHub
-2. Crie uma conta na Vercel (https://vercel.com)
-3. Conecte seu repositorio GitHub
-4. Configure variaveis de ambiente: GEMINI_API_KEY
-5. Clique em Deploy
-
-## Autor
-
-Waly Robert
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

@@ -1,0 +1,5 @@
+{
+  "name": "Gaby - Automação de Apps com IA",
+  "description": "Uma simulação web de um aplicativo Android que usa Gemini para automatizar e controlar outros aplicativos por meio de comandos em linguagem natural.",
+  "requestFramePermissions": []
+}

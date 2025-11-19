@@ -13,4 +13,4 @@ const AppLauncher: React.FC<AppLauncherProps> = ({ onAppSelect }) => {
   );
 };
 
-export default AppLauncher;
+export { AppLauncher };

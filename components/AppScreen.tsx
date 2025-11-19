@@ -15,4 +15,4 @@ const AppScreen: React.FC<AppScreenProps> = ({ appName, onClose }) => {
   );
 };
 
-export default AppScreen;
+export { AppScreen };

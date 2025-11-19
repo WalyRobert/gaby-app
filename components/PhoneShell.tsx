@@ -16,4 +16,4 @@ const PhoneShell: React.FC<PhoneShellProps> = ({ children }) => {
   );
 };
 
-export default PhoneShell;
+export { PhoneShell };

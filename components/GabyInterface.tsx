@@ -15,4 +15,4 @@ const GabyInterface: React.FC<GabyInterfaceProps> = ({ isListening, message }) =
   );
 };
 
-export default GabyInterface;
+export { GabyInterface };

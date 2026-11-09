@@ -1,3 +1,5 @@
+[Português](README.md) · [Español](README.es.md)
+
 # Gaby — Automatización de aplicaciones con IA
 
 **Idioma:** Español  

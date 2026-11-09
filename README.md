@@ -1,20 +1,67 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Gaby — Automação de aplicativos com IA
 
-# Run and deploy your AI Studio app
+**Idioma:** Português (Brasil)  
+**Status:** Protótipo experimental. A integração real com o modelo de IA e a execução em dispositivos reais ainda precisam ser concluídas.
 
-This contains everything you need to run your app locally.
+Gaby é um protótipo de assistente que recebe instruções em linguagem natural e representa ações sobre interfaces de aplicativos. A proposta é aproximar modelos de IA da automação de interfaces digitais.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1ztKDp8YkVilUeU8waId72HEwFKCT7OUM
+## Visão do projeto
 
-## Run Locally
+O fluxo pretendido é:
 
-**Prerequisites:**  Node.js
+1. A pessoa descreve uma tarefa em linguagem natural.
+2. A aplicação reúne uma descrição dos elementos disponíveis na tela simulada.
+3. Um modelo de IA interpreta a solicitação e propõe uma ação estruturada.
+4. A aplicação valida a ação.
+5. A interface demonstra a ação e pode navegar para outra tela simulada.
 
+> **Estado atual:** o serviço `services/geminiService.ts` ainda não realiza uma chamada efetiva à API Gemini. Atualmente, verifica a disponibilidade de uma chave e retorna uma mensagem demonstrativa. As ações são simuladas na interface; este repositório não comprova automação de aplicativos Android reais.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Tecnologias identificadas
+
+- React 19
+- TypeScript
+- Vite
+- SDK Google GenAI listado nas dependências
+- Componentes React para a interface de demonstração
+
+## Arquitetura observada
+
+- `App.tsx`: coordena estado da interface, histórico da conversa e ações simuladas.
+- `types.ts`: define comandos, ações, mensagens e elementos de tela.
+- `constants.tsx`: dados usados para representar aplicativos e telas.
+- `components/`: componentes visuais.
+- `services/geminiService.ts`: ponto de integração planejado com o Gemini.
+
+## Executar localmente
+
+**Pré-requisito:** Node.js e npm.
+
+```bash
+git clone https://github.com/WalyRobert/gaby-app.git
+cd gaby-app
+npm install
+npm run dev
+```
+
+Abra o endereço local informado pelo Vite.
+
+## Próximas etapas
+
+- [ ] Implementar chamada real ao Gemini em ambiente protegido.
+- [ ] Definir esquema JSON para ações e validar respostas do modelo.
+- [ ] Alinhar o tipo de retorno do serviço ao tipo `AutomationAction` consumido pela interface.
+- [ ] Implementar tratamento de erros, timeout e limites.
+- [ ] Adicionar confirmação humana para ações sensíveis.
+- [ ] Separar simulação visual de futura integração com dispositivos reais.
+- [ ] Criar testes automatizados e roteiro de demonstração.
+
+## Segurança
+
+A chave de API não deve ser exposta no código enviado ao navegador. Para uma versão de produção, recomenda-se intermediar chamadas por backend e manter segredos em variáveis de ambiente apenas no servidor. O protótipo não deve executar ações reais ou sensíveis em dispositivos.
+
+## Autor
+
+Waly Robert
+
+Projeto independente de estudo e experimentação em IA aplicada à automação de interfaces.

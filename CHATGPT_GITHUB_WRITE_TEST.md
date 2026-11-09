@@ -1,0 +1,1 @@
+Temporary permission test. This file is created and removed to verify GitHub write access.
